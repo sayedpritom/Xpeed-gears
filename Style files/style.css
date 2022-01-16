@@ -100,6 +100,33 @@ header button {
     height: 48px;
     width: 196px;
     background: linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%);
+    cursor: pointer;
+}
+
+.header-button-container:hover {
+    height: 48px;
+    width: 196px;
+    background-color: none;
+    animation: button-border 3s ease-in-out .2s infinite alternate ;
+    animation-play-state: running;
+
+}
+
+@keyframes button-border {
+	0% {
+        padding: 0px;
+        border: 1px solid rgba(119, 80, 255, 1);
+        border-radius: 50px;
+        transform: scale(1, 1)
+	}
+	100% {
+        padding: 15px;
+        border: 1px solid rgba(75, 253, 131, 1);
+        border-radius: 75px;
+        transform: scale(.9, .9)
+
+
+    }
 }
 
 .header-text-section {
