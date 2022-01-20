@@ -101,70 +101,84 @@ header .header-middle-section {
 .header-paragraph-text {
     font-weight: 500;
     color: #3A3A3A;
+    margin-bottom: 30px;
 }
 
 header button {
-    color: rgb(27, 27, 27);
-    font-weight: 600;
+    min-width: 196px;
+    min-height: 55px;
     font-size: 16px;
-    height: 48px;
-    width: 196px;
+    font-weight: 600;
+    color: white;
+    /* background: #4FD1C5; */
+    background: linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
-    border-radius: 30em;
-    font-size: 15px;
-    border: 1px solid rgba(119, 80, 255, .3);
+    outline: none;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background-color: white;
-    box-shadow: 6px 6px 12px rgba(75, 253, 131, .5),
-        -6px -6px 12px #ffffff;
+    padding: 10px;
 }
 
 header button::before {
     content: '';
-    width: 0;
-    height: 48px;
-    border-radius: 30em;
+    border-radius: 1000px;
+    min-width: calc(196px + 12px);
+    min-height: calc(55px + 12px);
+    border: 2px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
     position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%);
-    transition: .5s ease;
-    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+header button:hover, header button:focus {
+    color: #0f0f0f;
+    font-weight: 700;
+    font-size: 17;
+    text-transform: uppercase;
+    transform: translateX(6px);
+  }
+
+header button:hover::before, header button:focus::before {
+    opacity: 1;
+  }
+  
+  header button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
     z-index: -1;
-}
-
-header button:hover::before {
-    color: white;
-    width: 196px;
-    height: 48px;
-}
-
-/* .header-button-container:hover {
-    height: 48px;
-    width: 196px;
-    background-color: none;
-    animation: button-border 3s ease-in-out .2s infinite alternate;
-    animation-play-state: running;
-
-}
-
-@keyframes button-border {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  header button:hover::after, header button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
     0% {
-        padding: 0px;
-        border: 1px solid rgba(119, 80, 255, 1);
-        border-radius: 50px;
-        transform: scale(1, 1)
+      width: 30px;
+      height: 30px;
+      opacity: 1;
     }
-
     100% {
-        padding: 15px;
-        border: 1px solid rgba(75, 253, 131, 1);
-        border-radius: 75px;
-        transform: scale(.9, .9)
+      width: 300px;
+      height: 300px;
+      opacity: 0;
     }
-} */
+  }
 
 .header-text-section {
     width: 55%;
@@ -459,7 +473,11 @@ header button:hover::before {
     box-sizing: border-box;
     padding: 30px;
     color: white;
-    background: linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%);
+    /* background: linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%); */
+    background-image: url("../images/background-image-subscription.png"), linear-gradient(45deg, rgba(119, 80, 255, 1) 0%, rgba(75, 253, 131, 1) 100%);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
 
 .subscribe-newsletter-section>.newsletter-texts {
