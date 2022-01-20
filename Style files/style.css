@@ -5,8 +5,19 @@ body {
     font-family: Poppins;
     max-width: 1920px;
     margin: 0 auto;
+    word-wrap: break-word;
 }
 
+
+
+/* Responsive Universal Stylings starts*/
+@media only screen and (max-width: 500px) {
+    body {
+        word-break: break-word;
+    }
+}
+
+/* Responsive Universal Stylings ends*/
 /* Universal Stylings ends*/
 
 
@@ -34,6 +45,7 @@ nav>.logo>img {
 
 nav>.menu-items>ul {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
 
@@ -107,25 +119,24 @@ header button {
     height: 48px;
     width: 196px;
     background-color: none;
-    animation: button-border 3s ease-in-out .2s infinite alternate ;
+    animation: button-border 3s ease-in-out .2s infinite alternate;
     animation-play-state: running;
 
 }
 
 @keyframes button-border {
-	0% {
+    0% {
         padding: 0px;
         border: 1px solid rgba(119, 80, 255, 1);
         border-radius: 50px;
         transform: scale(1, 1)
-	}
-	100% {
+    }
+
+    100% {
         padding: 15px;
         border: 1px solid rgba(75, 253, 131, 1);
         border-radius: 75px;
         transform: scale(.9, .9)
-
-
     }
 }
 
@@ -237,7 +248,7 @@ header button {
 }
 
 .product {
-    max-width: 329px;
+    max-width: 450px;
     height: auto;
     left: 196px;
     top: 1035px;
@@ -393,6 +404,13 @@ header button {
     font-size: 14px;
 }
 
+/* Responsive featured-customer-review-section-starts */
+@media only screen and (max-width: 1250px) {
+    .review {
+        width: 100%;
+    }
+}
+/* Responsive featured-customer-review-section-ends */
 /* featured-customer-review-section-ends */
 
 
@@ -470,6 +488,11 @@ header button {
 @media only screen and (max-width: 668px) {
     .subscribe-newsletter-section {
         grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        padding: 0;
+        padding-bottom: 40px;
+        width: 100%;
+
     }
 
     .subscribe-newsletter-section {

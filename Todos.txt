@@ -1,0 +1,2 @@
+Improve the animations, Both button & header text,
+Add the round curcle at subscription
